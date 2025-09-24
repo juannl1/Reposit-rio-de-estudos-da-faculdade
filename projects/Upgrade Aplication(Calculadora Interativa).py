@@ -56,10 +56,14 @@ def multiplicacao(n1, n2):
     print(f"Total: {total:.2f}".replace(".", ","))
 
 def divisao(n1, n2):
-    if n2 == 0:
-        print("Não é possivel dividir por 0")
-    total = n1 / n2
-    print(f"Total: {total:.2f}".replace(".", ","))
+
+    if n1 == 0 or n2 == 0:
+        print("Não é possivel fazer divisão por 0")
+        ValueError
+
+    else:
+        total = n1 / n2
+        print(f"Total: {total:.2f}".replace(".", ","))
 
 def modulo(n1, n2):
     total = n1 % n2
@@ -379,12 +383,6 @@ def rodar_programa_principal():
                 try:
                     divisao_n1 = float(entrada("Valor a ser repartido: "))
                     divisao_n2 = float(entrada("Quantas vezes a ser repartido: "))
-
-                    # while True:
-                    #     if divisao_n2 == 0:
-                    #         print("Não é possivel dividir um número por 0")
-                    #         sleep(2)
-                    #Verificando divisão por 0 (Incompleto)
                     
                     divisao(divisao_n1, divisao_n2)
                     
